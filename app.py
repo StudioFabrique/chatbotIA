@@ -1,5 +1,5 @@
 from flask import Flask,  render_template, request, session
-from flask_session import Session
+from flask_session import Session #install Flask-Session
 from bot import initialisation, get_text_embedding, get_prompt, run_mistral
 import numpy as np
 import faiss

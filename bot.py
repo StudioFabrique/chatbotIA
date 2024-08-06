@@ -81,13 +81,6 @@ def run_mistral(prompt):
 
 
 
-#liste des mots qui permettent d'arreter le chat avec le bot
-#quit =["quit", "exit", "bye", "by"]
-
-
-#test sur une source
-#source = 'https://raw.githubusercontent.com/run-llama/llama_index/main/docs/docs/examples/data/paul_graham/paul_graham_essay.txt'
-
 
 
 def initialisation(source):
@@ -101,19 +94,3 @@ def initialisation(source):
     index = faiss.IndexFlatL2(d)
     index.add(text_embeddings)
     return (chunks,index)
-
-"""chunks,index= initialisation(source)
-while True :
-    question = input("You : ")
-    if question not in quit :
-        question_embeddings = np.array([get_text_embedding(question)])
-
-        #trouver les chunks similaires à la question
-        D, I = index.search(question_embeddings, k=2) # distance, index
-        retrieved_chunk = [chunks[i] for i in I.tolist()[0]]
-        #########################
-
-        prompt = get_prompt(retrieved_chunk, question)
-        print("CHATBOT : ",run_mistral(prompt))
-
-    else : break"""
