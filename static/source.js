@@ -23,8 +23,8 @@ function envoyerSource(){
         info.textContent = data;
         info.className = "info";
         const zoneInfo = document.getElementById("info");
+        zoneInfo.innerHTML = '';
         zoneInfo.append(info);
-        
     });
 
 }

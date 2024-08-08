@@ -5,13 +5,13 @@
 
 <body>
     <div class="zoneSource" id="zoneSource">
-        <h3>Veuillez saisir le lien de la source ou attacher un fichier pdf</h3>
+        <h3>Veuillez saisir le lien de la source</h3>
         <div class="info" id="info"></div>
             <!--zone info-->
-
-        <input type="text" name="source" id="source" placeholder="Saisissez le lien ...">
-        <button id="boutonSource" onclick="envoyerSource()">Analyser</button>
-
+        <div class="inputLien" id="inputLien">
+            <input type="text" name="source" id="source" class="input" placeholder="Saisissez le lien ...">
+            <button id="boutonSource" class="bouton" onclick="envoyerSource()">Analyser</button>
+        </div>
         <!--<form action="/upload" method="post" enctype="multipart/form-data">
             <input type="file" name="file" id='fichier_pdf' accept="application/pdf">
             <input type="submit" value="Analyser">
@@ -19,16 +19,18 @@
         
     </div>
     <div class="milieu">
+        <div class="welcome">
+            <h3>Comment puis je vous aider ?</h3>
+        </div>
+        
         <div class="zoneMessages" id="zoneMessages">
-            <div class="welcome">
-                <h3>How can I assist you ?</h3>
-            </div>
             <!--zone message à ajouter-->
         </div>
-
+            
+        
         <div class="ecrire" >
-            <input type="text" name="message" id="message" placeholder="Écrire un message...">
-            <button id="boutonMessage" onclick="envoyerMessage()">Envoyer</button>
+            <input type="text" name="message" id="message" class="input" placeholder="Écrire un message...">
+            <button id="boutonMessage" class="bouton" onclick="envoyerMessage()">Envoyer</button>
         </div>
     </div>
     <script src="{{ url_for('static', filename='chat.js') }}"></script>
