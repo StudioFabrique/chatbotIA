@@ -3,7 +3,6 @@ mistral : install mistralai
 faiss : install faiss-cpu
 flask : install flask
 sessionflaks : install Flask-Session
-os
 requests
 numpy
-"Le code api de mistralai est gratuit pendant 15jours (ouverture du compte mistralai nécessite un numéro de téléphone et une adresse mail"
+"Le code api de mistralai est gratuit pendant 15jours (ouverture du compte mistralai nécessite un numéro de téléphone et une adresse mail)"
