@@ -20,8 +20,8 @@ client = MistralClient(api_key)
 def get_text(source):    
     response = requests.get(source)
     text = response.text
-    return text[:5000]
-    #return text[:1000] (si le texte est long pour que les tests soient plus rapide)
+    return text[:4000] #test est tres long on oart jusqu'à 4000 caracteres pour le test sinon return texte
+    #return text
 ##############################################################################
 
 
