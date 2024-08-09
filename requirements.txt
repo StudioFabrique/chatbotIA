@@ -6,4 +6,4 @@ sessionflaks : install Flask-Session
 os
 requests
 numpy
-"Le code api de mistralai est gratuit pendant 15jours (ouverture du compte mistralai nécessite un numero de telephone et un mail"
+"Le code api de mistralai est gratuit pendant 15jours (ouverture du compte mistralai nécessite un numéro de téléphone et une adresse mail"
