@@ -7,7 +7,8 @@ function envoyerSource(){
     nouvelle_source.textContent = source;
     nouvelle_source.className = "sourceUser";
     zoneSource.append(nouvelle_source);
-    document.getElementById("source").value = ""
+    document.getElementById("source").value = "" 
+
     //envoyer le message au backend
     var sourceJson = {source : source};
     fetch('/getSource', {
@@ -18,12 +19,12 @@ function envoyerSource(){
     .then(function(response) {
         return response.text();
     }).then(function(data){
-        //dire que la source est bonne
+        //dire que la source est ajoutée
         const info = document.createElement("div");
         info.textContent = data;
         info.className = "info";
         const zoneInfo = document.getElementById("info");
-        zoneInfo.innerHTML = '';
+        zoneInfo.innerHTML = '';  //pour effacer l'info précédente
         zoneInfo.append(info);
     });
 

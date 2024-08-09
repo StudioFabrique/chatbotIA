@@ -57,10 +57,9 @@ h3 {
 .zoneMessages {
     flex: 1;
     overflow-y: auto;
-    border: 2px solid #000000;
 }
 
-.user {
+.user_message {
     border : 2px solid #000000;
     border-radius: 5%;
     background: #eee;
