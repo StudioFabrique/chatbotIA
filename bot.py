@@ -20,7 +20,7 @@ client = MistralClient(api_key)
 def get_text(source):    
     response = requests.get(source)
     text = response.text
-    return text[:3000]
+    return text[:2000]
     #return text[:1000] (si le texte est long pour que les tests soient plus rapide)
 ##############################################################################
 
