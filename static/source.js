@@ -7,7 +7,16 @@ function envoyerSource(){
     nouvelle_source.textContent = source;
     nouvelle_source.className = "sourceUser";
     zoneSource.append(nouvelle_source);
-    document.getElementById("source").value = ""
+    document.getElementById("source").value = "" 
+
+    //dire que la source est en cours d'analyse
+    const zoneInfo = document.getElementById("info");
+    zoneInfo.innerHTML = '';  //pour effacer l'info précédente
+    const info = document.createElement("div");
+    info.className = "info";
+    info.textContent = "La source est en cours d'analyse";
+    zoneInfo.append(info);
+    
     //envoyer le message au backend
     var sourceJson = {source : source};
     fetch('/getSource', {
@@ -18,13 +27,8 @@ function envoyerSource(){
     .then(function(response) {
         return response.text();
     }).then(function(data){
-        //dire que la source est bonne
-        const info = document.createElement("div");
+        //dire que la source est ajoutée
         info.textContent = data;
-        info.className = "info";
-        const zoneInfo = document.getElementById("info");
-        zoneInfo.append(info);
-        
     });
 
 }
